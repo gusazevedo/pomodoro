@@ -6,3 +6,11 @@ export interface Cycle {
   interruptedDate?: Date
   finishedDate?: Date
 }
+
+export interface CyclesContextType {
+  activeCycle: Cycle | undefined
+  activeCycleId: string | null
+  amountSecondsPassed: number
+  markCurrentCycleAsFinished: () => void
+  setSecondsPassed: (seconds: number) => void
+}
